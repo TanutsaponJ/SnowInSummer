@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      color: {
+      colors: {
         blackColor: "#1E2832",
-        primaryBg: "#1e28320d",
+        primaryBg: "#E5E5E5",
       },
       fontFamily: {
         primary: ["Roboto", "sans-serif"],

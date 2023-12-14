@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // ! import all Image
-import logo from "../assets/logo.png";
+import logo from "../../public/image/logo.png";
 
 // ! import header Icon
 import { FaBars } from "react-icons/fa";
@@ -29,7 +29,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="max-w-screen-2xl xl:px-28 px-4">
+    <header className="max-w-screen-2xl xl:px-28 px-4 absolute top-0 right-0 left-0">
       <nav className="flex justify-between items-center container md:py-4 pt-6 pb-3">
         <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
 
