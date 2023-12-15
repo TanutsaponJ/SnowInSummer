@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "/public/images/Banner.png";
+import bannerImage from "/images/banner.png";
 import { FaShoppingBag } from "react-icons/fa";
 
 const Banner = () => {
