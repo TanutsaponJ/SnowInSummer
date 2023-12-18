@@ -35,7 +35,7 @@ const Navbar = () => {
 
         {/* logo */}
         <a href="/">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" width={130} />
         </a>
 
         {/* account and shopping btn */}

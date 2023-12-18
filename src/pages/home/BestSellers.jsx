@@ -1,28 +1,27 @@
-import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
+// Importing necessary libraries and components
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 const BestSellers = () => {
+  // State for storing products data
   const [products, setProducts] = useState([]);
 
+  // Fetching products data on component mount
   useEffect(() => {
     fetch("/products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
+  // Filtering out the best sellers
   const bestseller = products.filter((item) => item.status === "Best Sellers");
-  //   console.log(bestseller);
 
+  // Component return
   return (
     <div className="max-w-screen-2xl container mx-auto xl:px-28 px-4">
       <div>
@@ -64,24 +63,24 @@ const BestSellers = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {bestseller.map((products) => (
-            <SwiperSlide key={products.id}>
-              <Link to={`/shop/${products.id}`}>
+          {bestseller.map((product) => (
+            <SwiperSlide key={product.id}>
+              <Link to={`/shop/${product.id}`}>
                 <img
-                  src={products.image}
-                  alt={products.title} // Use product title as alt text
-                  className="mx-auto w-full hover:scale-105 transition-all duration-300 "
+                  src={product.image}
+                  alt={product.title} // Use product title as alt text
+                  className="mx-auto w-full hover:scale-105 transition-all duration-300  "
                 />
               </Link>
               <div className="mt-4 px-4">
                 <h4 className="text-base font-semibold mb-2">
-                  {products.title}
+                  {product.title}
                 </h4>
 
                 <div className="flex justify-between">
-                  <p className="text-black/50">{products.category}</p>
+                  <p className="text-black/50">{product.category}</p>
                   <p className="font-semibold">
-                    ${products.price.toFixed(2)}
+                    ${product.price.toFixed(2)}
                   </p>{" "}
                   {/* Format price as currency */}
                 </div>
