@@ -13,7 +13,7 @@ Introducing our sleek e-commerce platform powered by React.js and styled with pr
 
 ## Demo 
 
-###  🚀 [https://splendid-arithmetic-c1cbb6.netlify.app/](https://benevolent-daffodil-9b001a.netlify.app)
+###  🚀 https://benevolent-daffodil-9b001a.netlify.app/
 
 
 
